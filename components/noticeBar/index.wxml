@@ -1,0 +1,34 @@
+<template name="bs-noticeBar">
+  <view class='notice {{bs_notice_bar.show ? "block" : "none" }}' >
+      /**
+      *左边的图标
+      */
+      <view wx:if="{{bs_notice_bar.icon}}">
+           <i class='iconfont {{bs_notice_bar.icon}}'></i>
+      </view>
+      <view wx:else>
+           <i class='iconfont icon-danjiantoushang'></i>
+      </view>
+      /**
+      *通知的内容
+      */
+      <view class="container">
+          <view class="content {{bs_notice_bar.icon ? left6 : left15}}">
+               {{bas_notice_bar.content}}
+          </view>
+      </view>
+      /**
+      *左边的关闭按钮
+      */
+      <view class="actionWrap" bindtap="$bs_notice_bar_click" data-content="{{ bs_notice_bar}}">
+          <view wx:if="{{bs_notice_bar.action}}">
+                {{bs_notice_bar.action}}
+          </view>
+          <view wx:else>
+               <i wx:if="{{bs_notice_bar.mode==='closeable'}}"class='iconfont icon-danjiantoushang'></i>
+               <i wx:elif="{{bs_notice_bar.mode==='link'}}"class='iconfont icon-danjiantoushang'></i>
+          </view>
+      </view>
+  </view>
+</template>
+

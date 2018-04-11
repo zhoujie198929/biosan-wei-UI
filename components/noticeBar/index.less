@@ -1,0 +1,61 @@
+@import "../style/mixins.less";
+
+.notice {
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  background: @notice_bar_fill;
+}
+
+.container {
+  flex: 1;
+  margin-right: 30 rpx,
+  overflow: hidden;
+  width: 0 rpx,
+}
+
+.content {
+  font-size: 30 rpx;
+  color: @notice_bar_warning;
+}
+
+.left6 {
+  margin-left: 10 rpx;
+}
+
+.left15 {
+  margin-left: 30 rpx;
+}
+
+.actionWrap {
+  margin-right: 30 rpx;
+}
+
+.close {
+  color: @notice_bar_warning;
+  font-size: 36 rpx;
+  font-weight: 200;
+  text-align: left;
+}
+
+.link {
+  transform: rotate(225deg);
+  color: @notice_bar_warning;
+  font-size: 20 rpx;
+  font-weight: 500;
+  text-align: left;
+}
+
+.font_one_line {
+  width: inherit;
+  height: inherit;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.icon_size {
+  font-size: 30 rpx;
+}
+
