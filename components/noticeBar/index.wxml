@@ -1,20 +1,20 @@
 <template name="bs-noticeBar">
-  <view class='notice {{bs_notice_bar.show ? "block" : "none" }}' >
+  <view class='notice' wx:if="{{bs_notice_bar.show}}" >
       /**
       *左边的图标
       */
       <view wx:if="{{bs_notice_bar.icon}}">
-           <i class='iconfont {{bs_notice_bar.icon}}'></i>
+           <i class='iconfont {{bs_notice_bar.icon}} icon_color'></i>
       </view>
       <view wx:else>
-           <i class='iconfont icon-danjiantoushang'></i>
+           <i class='iconfont icon-laba icon_color'></i>
       </view>
       /**
       *通知的内容
       */
-      <view class="container">
-          <view class="content {{bs_notice_bar.icon ? left6 : left15}}">
-               {{bas_notice_bar.content}}
+      <view class="ncontainer">
+          <view class="ncontent {{bs_notice_bar.icon ? left6 : left15}}">
+               {{bs_notice_bar.content}}
           </view>
       </view>
       /**
@@ -25,8 +25,8 @@
                 {{bs_notice_bar.action}}
           </view>
           <view wx:else>
-               <i wx:if="{{bs_notice_bar.mode==='closeable'}}"class='iconfont icon-danjiantoushang'></i>
-               <i wx:elif="{{bs_notice_bar.mode==='link'}}"class='iconfont icon-danjiantoushang'></i>
+               <i wx:if="{{bs_notice_bar.mode==='closeable'}}"class='iconfont icon-chacha icon_color'></i>
+               <i wx:elif="{{bs_notice_bar.mode==='link'}}"class='iconfont icon-jiantou icon_color'></i>
           </view>
       </view>
   </view>
