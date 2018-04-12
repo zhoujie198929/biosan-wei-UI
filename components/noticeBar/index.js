@@ -9,11 +9,11 @@ function resolveClickLink() {
 const bsNoticeBarController = {
     $bs_notice_bar_init: function (options) {
         let {
-            action:'',
-            content:'notice content',
-            mode:'closeable',
-            icon:'',
-            show:true
+            action='',
+            content='notice content',
+            mode='closeable',
+            icon='',
+            show=true
         }=options;
         this.setData({
             bs_notice_bar: {
